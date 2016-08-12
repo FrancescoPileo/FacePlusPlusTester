@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:transitionGroup="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:clickable="false"
+            app:logoDescription="@string/app_name"
+            app:logo="@drawable/fpp_tester_white_116x32" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/list" >
+    </ListView>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_addButtonColorNormal="@color/accent_material_light"
+        fab:fab_addButtonColorPressed="@color/accent_material_dark"
+        fab:fab_addButtonPlusIconColor="@color/white"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="bottom|right|center"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/accent_material_dark"
+            fab:fab_colorPressed="@color/accent_material_light"
+            fab:fab_icon="@drawable/fpp_verify"
+            fab:fab_title="Verify"
+            fab:fab_size="mini"
+            android:onClick="VerifyTraining"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/accent_material_dark"
+            fab:fab_colorPressed="@color/accent_material_light"
+            fab:fab_icon="@drawable/fpp_search"
+            fab:fab_title="Search"
+            fab:fab_size="mini"
+            android:onClick="SearchTraining"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_identify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/accent_material_dark"
+            fab:fab_colorPressed="@color/accent_material_light"
+            fab:fab_icon="@drawable/fpp_identify"
+            fab:fab_title="Identify"
+            fab:fab_size="mini"
+            android:onClick="IdentifyTraining"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</android.support.design.widget.CoordinatorLayout>

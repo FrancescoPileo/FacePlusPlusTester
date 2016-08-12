@@ -1,0 +1,25 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Person.PersonMain">
+    <item
+        android:id="@+id/action_all"
+        android:orderInCategory="100"
+        android:title="All"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/action_cancel"
+        android:orderInCategory="200"
+        android:title="Cancel"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_ok"
+        android:orderInCategory="300"
+        android:title="Ok"
+        app:showAsAction="ifRoom"
+        />
+
+
+</menu>

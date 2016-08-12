@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/accent_material_light</item>
+        <item name="colorPrimaryDark">@color/accent_material_dark</item>
+        <item name="colorAccent">@color/accent_material_dark</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Transparent theme -->
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- EditText theme -->
+    <style name="AppTheme.EditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textColorHighlight">@android:color/holo_blue_bright</item>
+    </style>
+
+    <!-- Fab label style -->
+    <style name="menu_labels_style">
+        <item name="android:textColor">@color/accent_material_light</item>
+    </style>
+
+</resources>

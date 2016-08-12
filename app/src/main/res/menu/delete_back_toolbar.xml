@@ -1,0 +1,20 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Gallery.GalleryMain">
+    <item
+        android:id="@+id/action_delete"
+        android:orderInCategory="200"
+        android:title="Delete"
+        android:icon="@drawable/fpp_delete"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/action_back"
+        android:orderInCategory="300"
+        android:title="Back"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FacePlusPlus Tester</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_acquire">Acquire</string>
+    <string name="btn_gallery">Galleria Identità</string>
+    <string name="btn_test">Test</string>
+    <string name="api_key">13560fbea718bea9a9c0ebdb79c43005</string>
+    <string name="api_secret">PAuTAgXsu3KLpurbCbW7brqpeMoKfzZD</string>
+    <string name="create_person">Create Person</string>
+    <string name="ac_name_image_grid">Choose image</string>
+    <string name="uri">uri</string>
+    <string name="position">position</string>
+
+</resources>
+
+

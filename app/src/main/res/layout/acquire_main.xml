@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:transitionGroup="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:clickable="false"
+            app:logoDescription="@string/app_name"
+            app:title="Detect"
+            app:logo="@drawable/fpp_tester_white_116x32" />
+
+    </android.support.design.widget.AppBarLayout>
+   >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/imvAcquired"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="Acquired Image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Image Info:"
+                android:id="@+id/txtvImage" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lstvImage"
+                android:layout_gravity="center_horizontal"
+                android:choiceMode="none" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Face Info:"
+                android:id="@+id/txtvFace" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lstvFace"
+                android:choiceMode="none" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Assign to person"
+                android:onClick="assignFaceToPerson"
+                android:id="@+id/btnAssignPerson" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Assign to faceset"
+                android:id="@+id/btnAssignFaceset"
+                android:onClick="assignFaceToFaceset"
+                android:layout_gravity="right" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Verify"
+                android:id="@+id/btnVerify"
+                android:onClick="verifyFace"
+                android:layout_gravity="right" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:id="@+id/btnSearch"
+                android:onClick="searchFace"
+                android:layout_gravity="right" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Identify"
+                android:id="@+id/btnIdentify"
+                android:onClick="identifyFace"
+                android:layout_gravity="right" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

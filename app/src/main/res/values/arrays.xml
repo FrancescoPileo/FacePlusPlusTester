@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="training_spinner_array">
+        <item>Select an option</item>
+        <item>Verify Person</item>
+        <item>Identify in Group</item>
+        <item>Search in Faceset</item>
+    </string-array>
+
+    <array name="acquire_choise">
+        <item>Take a photo</item>
+        <item>Capture video</item>
+        <item>Gallery</item>
+    </array>
+
+    <array name="video_choise">
+        <item>Play video</item>
+        <item>Select frame</item>
+    </array>
+</resources>
