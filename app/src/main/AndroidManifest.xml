@@ -27,33 +27,50 @@
         <activity android:name=".Detect.AcquireVideo" />
         <activity android:name=".Gallery.GalleryMain" />
 
-        <activity
-            android:name=".Detect.DetectImage"
+        <activity android:name=".Detect.DetectImage"
             android:configChanges="orientation|keyboardHidden|screenSize" />
 
-        <activity android:name=".Person.PersonCreate" />
-        <activity android:name=".Person.PersonMain" />
-        <activity android:name=".Person.PersonInfo" />
-        <activity android:name=".Person.PersonEdit" />
+        <activity android:name=".Person.PersonCreate"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Person.PersonMain"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Person.PersonInfo"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Person.PersonEdit"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".Group.GroupMain" />
-        <activity android:name=".Group.GroupCreate" />
-        <activity android:name=".Group.GroupInfo" />
-        <activity android:name=".Group.GroupEdit" />
+        <activity android:name=".Group.GroupMain"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Group.GroupCreate"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Group.GroupInfo"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Group.GroupEdit"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".Faceset.FacesetMain" />
-        <activity android:name=".Faceset.FacesetInfo" />
-        <activity android:name=".Faceset.FacesetCreate" />
-        <activity android:name=".Faceset.FacesetEdit" />
+        <activity android:name=".Faceset.FacesetMain"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Faceset.FacesetInfo"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Faceset.FacesetCreate"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Faceset.FacesetEdit"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".Training.TrainingMain"/>
-        <activity android:name=".Training.TrainingInfo"/>
+        <activity android:name=".Training.TrainingMain"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Training.TrainingInfo"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".Recognition.RecognitionIdentifyResults"/>
-        <activity android:name=".Recognition.RecognitionVerifyResults"/>
-        <activity android:name=".Recognition.RecognitionSearchResults"/>
+        <activity android:name=".Recognition.RecognitionIdentifyResults"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Recognition.RecognitionVerifyResults"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Recognition.RecognitionSearchResults"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".Face.FaceInfo" />
+        <activity android:name=".Face.FaceInfo"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
 
     </application>
@@ -63,11 +80,5 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
-
-
-
-
-
-
 
 </manifest>
