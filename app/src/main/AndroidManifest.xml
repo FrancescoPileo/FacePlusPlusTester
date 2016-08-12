@@ -21,14 +21,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".FirstRun" />
+        <activity android:name=".FirstRun"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
-        <activity android:name=".Detect.AcquirePhoto" />
-        <activity android:name=".Detect.AcquireVideo" />
-        <activity android:name=".Gallery.GalleryMain" />
-
+        <activity android:name=".Detect.AcquirePhoto"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".Detect.AcquireVideo"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity android:name=".Detect.DetectImage"
             android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity android:name=".Gallery.GalleryMain"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
 
         <activity android:name=".Person.PersonCreate"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
