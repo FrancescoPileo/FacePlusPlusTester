@@ -95,10 +95,11 @@ public class CustomCheckList extends ArrayAdapter<Info>{
         }
 
         Info info = infoList.get(position);
-        holder.tag.setText( info.getTag());
+        holder.tag.setText(info.getTag());
         holder.name.setText(info.getName());
         holder.check.setChecked(checkAll);
         holder.check.setEnabled(enableAll);
+        info.setChecked(checkAll);
         holder.check.setTag(info);
 
 
