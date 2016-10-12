@@ -1,12 +1,17 @@
 package com.univpm.s1055802.faceplusplustester;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -32,6 +37,7 @@ import com.univpm.s1055802.faceplusplustester.Training.TrainingMain;
 import com.univpm.s1055802.faceplusplustester.Utils.Callback;
 import com.univpm.s1055802.faceplusplustester.Utils.Directories;
 import com.univpm.s1055802.faceplusplustester.Utils.FileUtils;
+import com.univpm.s1055802.faceplusplustester.Utils.Permissions;
 
 import org.json.JSONObject;
 
@@ -46,6 +52,7 @@ public class Main extends AppCompatActivity {
     private Button btnGallery;
 
     private static final int FIST_RUN = 0;
+    private static final int WRITE_PERMISSION = 1;
 
 
     @Override
@@ -54,7 +61,16 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         checkAuth();
-        checkDirectories();
+        if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+            Permissions.checkPermissions(Main.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_PERMISSION, new Runnable() {
+                @Override
+                public void run() {
+                    checkDirectories();
+                }
+            });
+        } else {
+            checkDirectories();
+        }
         initUIL();
         setSupportActionBar(toolbar);
     }
@@ -80,7 +96,6 @@ public class Main extends AppCompatActivity {
         dirArray.add(Directories.TESTS);
         dirArray.add(Directories.THUMB);
         dirArray.add(Directories.VIDEOS);
-
         for (String dir: dirArray) {
             File directory = new File(dir);
             if (!directory.exists()){
@@ -114,6 +129,29 @@ public class Main extends AppCompatActivity {
             ((FppTester) getApplication()).setApiSecret(auth.getString("secret", null));
             ((FppTester) getApplication()).setCN(auth.getBoolean("is_cn", false));
             ((FppTester) getApplication()).setDebug(auth.getBoolean("is_debug", false));
+        }
+    }
+
+    /**
+     * Nelle versioni android 6.0+ avvia l'evento di cattura dopo l'acquisizione dei permessi<
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case WRITE_PERMISSION: {
+                if (grantResults.length > 0){
+                    if (grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                        checkDirectories();
+                    }
+                } else {
+                    finish();
+                }
+                return;
+            }
         }
     }
 

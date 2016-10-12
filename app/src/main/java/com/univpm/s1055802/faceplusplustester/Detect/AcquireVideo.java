@@ -18,6 +18,7 @@ import android.util.Log;
 import com.univpm.s1055802.faceplusplustester.Gallery.GalleryMain;
 import com.univpm.s1055802.faceplusplustester.Utils.Directories;
 import com.univpm.s1055802.faceplusplustester.Utils.FileUtils;
+import com.univpm.s1055802.faceplusplustester.Utils.Permissions;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -34,7 +35,6 @@ import java.util.Date;
 public class AcquireVideo extends AppCompatActivity {
 
     static final int REQUEST_TAKE_VIDEO = 3;
-    static final int REQUEST_DETECT_PHOTO = 4;
     static final int GALLERY_INTENT_CALLED = 5;
     static final int CAMERA_AND_WRITE_PERMISSION = 1;
 
@@ -47,30 +47,17 @@ public class AcquireVideo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-            CheckPermissions(AcquireVideo.this, new String[] {Manifest.permission.CAMERA,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE}, CAMERA_AND_WRITE_PERMISSION);
+            Permissions.checkPermissions(AcquireVideo.this, new String[]{Manifest.permission.CAMERA,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE}, CAMERA_AND_WRITE_PERMISSION, new Runnable() {
+                @Override
+                public void run() {
+                    Acquire();
+                }
+            });
         } else {
             Acquire();
         }
 
-    }
-
-    /**
-     *  Nelle versioni di android 6.0+ controlla i permessi di accedere alla fotocamera Manifest.permission.CAMERA
-     */
-    protected void CheckPermissions(Activity activity, String[] permissions, final int requestCode){
-        // Here, thisActivity is the current activity
-        boolean hasPermission = true;
-        for (int i = 0; i < permissions.length && hasPermission; i++) {
-            if (ContextCompat.checkSelfPermission(activity, permissions[i]) != PackageManager.PERMISSION_GRANTED) {
-                hasPermission = false;
-            }
-        }
-        if (!hasPermission){
-            ActivityCompat.requestPermissions(activity, permissions, requestCode);
-        } else {
-            Acquire();
-        }
     }
 
     /**
@@ -129,7 +116,6 @@ public class AcquireVideo extends AppCompatActivity {
                 startActivityForResult(takeVideoIntent, REQUEST_TAKE_VIDEO);
             }
         }
-
     }
 
     /**
