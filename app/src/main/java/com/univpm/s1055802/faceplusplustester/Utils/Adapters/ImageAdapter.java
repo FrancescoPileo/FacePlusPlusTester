@@ -38,9 +38,6 @@ import com.univpm.s1055802.faceplusplustester.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 28/07/16.
- */
 public class ImageAdapter extends BaseAdapter {
 
     public enum MediaType {photo, video};

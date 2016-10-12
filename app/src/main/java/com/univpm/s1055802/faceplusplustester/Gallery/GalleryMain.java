@@ -44,9 +44,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Created by kekko on 25/07/16.
- */
 public class GalleryMain extends AppCompatActivity {
 
     //todo caricamento mentre estrapola frame

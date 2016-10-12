@@ -50,9 +50,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- * Created by kekko on 07/05/16.
- */
 public class PersonMain extends AppCompatActivity {
 
     private Toolbar toolbar;

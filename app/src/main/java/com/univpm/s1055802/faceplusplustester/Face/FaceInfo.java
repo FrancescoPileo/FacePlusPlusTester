@@ -42,9 +42,6 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 19/05/16.
- */
 public class FaceInfo extends AppCompatActivity{
 
     private ImageView imgvFace;

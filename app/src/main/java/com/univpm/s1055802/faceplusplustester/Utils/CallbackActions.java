@@ -22,9 +22,6 @@ package com.univpm.s1055802.faceplusplustester.Utils;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by kekko on 16/05/16.
- */
 public class CallbackActions {
 
     protected Callback callback = null;

@@ -35,9 +35,6 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 
-/**
- * Created by kekko on 19/05/16.
- */
 public class DetectActions {
 
     public static class Detect extends CallbackActions {

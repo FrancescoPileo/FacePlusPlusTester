@@ -18,9 +18,6 @@
 
 package com.univpm.s1055802.faceplusplustester.Group;
 
-/**
- * Created by kekko on 16/05/16.
- */
 
 import android.app.Activity;
 import android.content.Context;
@@ -55,9 +52,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- * Created by kekko on 07/05/16.
- */
 public class GroupMain extends AppCompatActivity {
 
     private Toolbar toolbar;

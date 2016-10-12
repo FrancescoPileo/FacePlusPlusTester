@@ -44,9 +44,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 16/05/16.
- */
 public class GroupInfo extends AppCompatActivity {
 
     private ListView lstvInfo = null;

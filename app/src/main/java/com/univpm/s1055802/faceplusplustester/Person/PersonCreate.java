@@ -39,9 +39,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 05/05/16.
- */
 public class PersonCreate extends AppCompatActivity {
 
     private EditText txteName = null;

@@ -36,9 +36,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 15/06/16.
- */
 public class TrainingActions {
 
     private static final String SAVED_TRAININGS = "saved_trainings";

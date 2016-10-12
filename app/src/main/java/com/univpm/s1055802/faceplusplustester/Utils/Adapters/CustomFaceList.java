@@ -35,10 +35,6 @@ import com.univpm.s1055802.faceplusplustester.Utils.Directories;
 
 import java.io.File;
 
-/**
- * Created by kekko on 03/05/16.
- */
-
 public class CustomFaceList extends ArrayAdapter<String>{
 
     private final Activity context;

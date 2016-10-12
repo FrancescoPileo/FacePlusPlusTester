@@ -28,10 +28,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by kekko on 14/07/16.
- */
-
-/**
  * Classe che contiene tutte le informazioni della Session
  */
 public class Session {

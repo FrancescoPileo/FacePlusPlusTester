@@ -47,9 +47,6 @@ import java.util.Date;
 
 
 //todo aggiungere toolbar back (anche ad acquire)
-/**
- * Created by kekko on 23/07/16.
- */
 public class AcquireVideo extends AppCompatActivity {
 
     static final int REQUEST_TAKE_VIDEO = 3;

@@ -29,9 +29,6 @@ import com.univpm.s1055802.faceplusplustester.Utils.CallbackActions;
 
 import org.json.JSONObject;
 
-/**
- * Created by kekko on 16/06/16.
- */
 public class SessionActions {
 
 

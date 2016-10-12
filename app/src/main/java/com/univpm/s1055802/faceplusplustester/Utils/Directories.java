@@ -23,10 +23,6 @@ import android.os.Environment;
 import java.io.File;
 
 /**
- * Created by kekko on 28/04/16.
- */
-
-/**
  * Classe che definisce le diverse directories dell'applicazione
  */
 public class Directories {

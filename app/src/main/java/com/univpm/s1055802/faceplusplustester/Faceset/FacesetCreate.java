@@ -32,9 +32,6 @@ import com.univpm.s1055802.faceplusplustester.Utils.Callback;
 
 import org.json.JSONObject;
 
-/**
- * Created by kekko on 05/05/16.
- */
 public class FacesetCreate extends AppCompatActivity {
 
     private EditText txteName = null;

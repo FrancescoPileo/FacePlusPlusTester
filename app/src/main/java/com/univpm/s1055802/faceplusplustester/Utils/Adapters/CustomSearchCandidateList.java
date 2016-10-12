@@ -37,10 +37,6 @@ import com.univpm.s1055802.faceplusplustester.Utils.Directories;
 import java.io.File;
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 03/05/16.
- */
-
 public class CustomSearchCandidateList extends ArrayAdapter<Recognition.SearchResults.Candidate>{
 
     private final Activity context;

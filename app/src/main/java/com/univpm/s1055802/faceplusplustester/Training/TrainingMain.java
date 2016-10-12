@@ -48,9 +48,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 
-/**
- * Created by kekko on 15/06/16.
- */
 public class TrainingMain extends AppCompatActivity {
 
     private Toolbar toolbar;

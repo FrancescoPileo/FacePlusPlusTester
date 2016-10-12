@@ -41,9 +41,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 16/05/16.
- */
 public class GroupCreate extends AppCompatActivity {
 
     private EditText txteName = null;

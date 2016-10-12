@@ -26,10 +26,6 @@ import org.json.JSONObject;
 import java.util.Arrays;
 
 /**
- * Created by kekko on 30/04/16.
- */
-
-/**
  * Classe che contiene tutte le informazioni di una immagine sulla quale è stata svolta una Detect
  */
 public class Image {

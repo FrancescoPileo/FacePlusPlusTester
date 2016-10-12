@@ -35,10 +35,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- * Created by kekko on 03/05/16.
- */
-
 public class CustomTrainingList extends ArrayAdapter<Training>{
 
     private final Activity context;

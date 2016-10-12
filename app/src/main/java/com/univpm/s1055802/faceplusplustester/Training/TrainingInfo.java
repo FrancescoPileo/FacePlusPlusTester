@@ -45,9 +45,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 17/06/16.
- */
 public class TrainingInfo extends AppCompatActivity{
 
     private ListView lstvInfo = null;

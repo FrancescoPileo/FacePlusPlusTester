@@ -21,9 +21,6 @@ package com.univpm.s1055802.faceplusplustester.Recognition;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by kekko on 18/07/16.
- */
 public class Recognition {
     /**
      * Classe che rappresenta il risultato di un Verify

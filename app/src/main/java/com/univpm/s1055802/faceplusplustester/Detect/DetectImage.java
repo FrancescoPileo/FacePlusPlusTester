@@ -61,9 +61,6 @@ import java.util.ArrayList;
 
 import static com.univpm.s1055802.faceplusplustester.Utils.ImageUtils.*;
 
-/**
- * Created by kekko on 29/04/16.
- */
 public class DetectImage extends AppCompatActivity {
 
     private ImageView imvImage = null;

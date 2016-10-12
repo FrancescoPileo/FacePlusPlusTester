@@ -25,10 +25,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by kekko on 19/05/16.
- */
-
-/**
  * Classe che contiene tutte le informazioni di un Faceset
  */
 public class Faceset extends Info {

@@ -40,9 +40,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 09/05/16.
- */
 public class FacesetEdit extends AppCompatActivity{
 
     private EditText txteId = null;

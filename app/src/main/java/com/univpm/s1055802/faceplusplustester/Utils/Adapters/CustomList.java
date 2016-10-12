@@ -32,10 +32,6 @@ import com.univpm.s1055802.faceplusplustester.Utils.Info;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 03/05/16.
- */
-
 public class CustomList extends ArrayAdapter<Info>{
 
     private final Activity context;

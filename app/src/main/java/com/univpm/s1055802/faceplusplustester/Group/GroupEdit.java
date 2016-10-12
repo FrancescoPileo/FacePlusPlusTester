@@ -43,9 +43,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 17/05/16.
- */
 public class GroupEdit extends AppCompatActivity {
 
     private EditText txteId = null;

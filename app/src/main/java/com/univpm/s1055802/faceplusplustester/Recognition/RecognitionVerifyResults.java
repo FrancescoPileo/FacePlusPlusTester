@@ -35,9 +35,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 14/07/16.
- */
 public class RecognitionVerifyResults extends AppCompatActivity {
 
     private String personId;

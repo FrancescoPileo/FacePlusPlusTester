@@ -26,10 +26,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by kekko on 09/05/16.
- */
-
-/**
  * Classe che contiene tutte le informazioni di una Person
  */
 public class Person extends Faceset{

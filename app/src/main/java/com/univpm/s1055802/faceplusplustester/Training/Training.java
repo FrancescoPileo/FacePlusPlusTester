@@ -35,10 +35,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * Created by kekko on 14/06/16.
- */
-
-/**
  * Classe che contiene tutte le informazioni di un Training
  */
 public class Training {

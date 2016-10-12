@@ -38,9 +38,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by kekko on 29/04/16.
- */
 public class AcquirePhoto extends Activity {
 
     static final int REQUEST_TAKE_PHOTO = 3;

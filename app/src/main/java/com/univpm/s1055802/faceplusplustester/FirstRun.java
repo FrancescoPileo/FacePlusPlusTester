@@ -40,9 +40,6 @@ import com.univpm.s1055802.faceplusplustester.Utils.CallbackActions;
 
 import org.json.JSONObject;
 
-/**
- * Created by kekko on 08/08/16.
- */
 public class FirstRun extends AppCompatActivity {
 
     private Toolbar toolbar = null;

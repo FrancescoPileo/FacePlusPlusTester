@@ -29,9 +29,6 @@ import com.univpm.s1055802.faceplusplustester.Utils.CallbackActions;
 
 import org.json.JSONObject;
 
-/**
- * Created by kekko on 14/07/16.
- */
 public class RecognitionActions {
 
     public static class Verify extends CallbackActions {

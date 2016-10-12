@@ -32,10 +32,6 @@ import com.univpm.s1055802.faceplusplustester.Recognition.Recognition;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 03/05/16.
- */
-
 public class CustomIdentifyCandidateList extends ArrayAdapter<Recognition.IdentifyResults.Candidate>{
 
     private final Activity context;

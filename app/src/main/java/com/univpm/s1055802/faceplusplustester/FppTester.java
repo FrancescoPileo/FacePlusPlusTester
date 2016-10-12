@@ -21,10 +21,6 @@ package com.univpm.s1055802.faceplusplustester;
 import android.app.Application;
 
 /**
- * Created by kekko on 03/08/16.
- */
-
-/**
  * Classe che identifica l'intera applicazione, e permette di definire variabili globali
  */
 public class FppTester extends Application {

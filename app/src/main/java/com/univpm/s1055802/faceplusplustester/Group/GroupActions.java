@@ -32,9 +32,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 17/05/16.
- */
 public class GroupActions {
 
     public static class SendCreate extends CallbackActions {

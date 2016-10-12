@@ -22,10 +22,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by kekko on 30/04/16.
- */
-
-/**
  * Classe che contiene tutte le informazioni di una Face sulla quale è stata svolta una Detect
  */
 public class Face {

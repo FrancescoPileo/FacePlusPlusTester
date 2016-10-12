@@ -31,10 +31,6 @@ import com.univpm.s1055802.faceplusplustester.Utils.CallbackActions;
 import org.json.JSONObject;
 
 /**
- * Created by kekko on 19/05/16.
- */
-
-/**
  * Classe che contiene tutte le azioni sulle Face
  */
 public class FaceAction {

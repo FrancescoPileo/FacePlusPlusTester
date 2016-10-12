@@ -24,10 +24,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 
 /**
- * Created by kekko on 12/10/16.
- */
-
-/**
  *  Nelle versioni di android 6.0+ controlla i permessi per accedere alla fotocamera, memoria esterna, etc.
  */
 public class Permissions {

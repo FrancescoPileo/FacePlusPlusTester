@@ -46,9 +46,6 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
 
-/**
- * Created by kekko on 26/07/16.
- */
 public class GalleryImagesFragment extends Fragment implements GalleryFragment {
 
 
