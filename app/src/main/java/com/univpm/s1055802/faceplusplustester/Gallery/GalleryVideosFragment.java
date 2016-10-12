@@ -88,7 +88,7 @@ public class GalleryVideosFragment extends Fragment implements GalleryFragment {
             filePath = new ArrayList<>();
             for (int i = 0; i < listDir.length; i++)
             {
-
+                Log.v("video", String.valueOf(listDir.length));
                 videoFiles.add(listDir[i].listFiles(new FilenameFilter() {
                     public boolean accept(File dir, String name) {
                         File file = new File(dir.getPath(), name);

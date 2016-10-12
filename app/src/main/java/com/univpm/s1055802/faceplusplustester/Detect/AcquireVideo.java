@@ -1,12 +1,17 @@
 package com.univpm.s1055802.faceplusplustester.Detect;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -31,7 +36,8 @@ public class AcquireVideo extends AppCompatActivity {
     static final int REQUEST_TAKE_VIDEO = 3;
     static final int REQUEST_DETECT_PHOTO = 4;
     static final int GALLERY_INTENT_CALLED = 5;
-    static final String AQUIRED_PHOTO = "Photo";
+    static final int CAMERA_AND_WRITE_PERMISSION = 1;
+
 
     private File videoFile;
     private File framesDir;
@@ -40,8 +46,62 @@ public class AcquireVideo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        Acquire();
+        if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+            CheckPermissions(AcquireVideo.this, new String[] {Manifest.permission.CAMERA,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE}, CAMERA_AND_WRITE_PERMISSION);
+        } else {
+            Acquire();
+        }
 
+    }
+
+    /**
+     *  Nelle versioni di android 6.0+ controlla i permessi di accedere alla fotocamera Manifest.permission.CAMERA
+     */
+    protected void CheckPermissions(Activity activity, String[] permissions, final int requestCode){
+        // Here, thisActivity is the current activity
+        boolean hasPermission = true;
+        for (int i = 0; i < permissions.length && hasPermission; i++) {
+            if (ContextCompat.checkSelfPermission(activity, permissions[i]) != PackageManager.PERMISSION_GRANTED) {
+                hasPermission = false;
+            }
+        }
+        if (!hasPermission){
+            ActivityCompat.requestPermissions(activity, permissions, requestCode);
+        } else {
+            Acquire();
+        }
+    }
+
+    /**
+     * Nelle versioni android 6.0+ avvia l'evento di cattura dopo l'acquisizione dei permessi<
+     * @param requestCode
+     * @param permissions
+     * @param grantResults
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case CAMERA_AND_WRITE_PERMISSION: {
+                if (grantResults.length > 0){
+                    boolean allPermission = true;
+                    for (int i = 0; i < grantResults.length && allPermission; i++){
+                        if (grantResults[i] != PackageManager.PERMISSION_GRANTED){
+                            allPermission = false;
+                        }
+                    }
+                    if (allPermission){
+                        Acquire();
+                    } else {
+                        finish();
+                    }
+                } else {
+                    finish();
+                }
+                return;
+            }
+        }
     }
 
     /**
@@ -147,7 +207,6 @@ public class AcquireVideo extends AppCompatActivity {
                     fOut.flush();
                     fOut.close();
                 } catch (IOException e) {
-                    Log.v("errore", "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
                     e.printStackTrace();
                 }
 
