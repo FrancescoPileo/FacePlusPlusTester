@@ -55,6 +55,7 @@ public class AcquireVideo extends AppCompatActivity {
 
 
     private File videoFile;
+    private File videoDir;
     private File framesDir;
     private Intent galleryIntent;
 
@@ -143,16 +144,16 @@ public class AcquireVideo extends AppCompatActivity {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String videoFileName = "FPP_" + timeStamp + "_";
         String videoFileDir = "FPP_" + timeStamp;
-        File storageDir = new File(Directories.VIDEOS, videoFileDir);
-        storageDir.mkdirs();
-        framesDir = new File(storageDir, "Frames");
+        videoDir = new File(Directories.VIDEOS, videoFileDir);
+        videoDir.mkdirs();
+        framesDir = new File(videoDir, "Frames");
         framesDir.mkdirs();
         createGalleryIntent(framesDir);
 
         File video = File.createTempFile(
                 videoFileName,  /* prefix */
                 ".mp4",         /* suffix */
-                storageDir      /* directory */
+                videoDir      /* directory */
         );
 
         return video;
@@ -162,10 +163,12 @@ public class AcquireVideo extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_TAKE_VIDEO){
-            if (resultCode == RESULT_CANCELED)
+            if (resultCode == RESULT_CANCELED) {
+                FileUtils.deleteRecursive(videoDir);
                 setResult(Activity.RESULT_CANCELED);
-            else {
-                captureFrames(data.getData());
+            } else {
+                captureFrames(Uri.fromFile(videoFile));
+                //captureFrames(data.getData());
                 startActivityForResult(galleryIntent, GALLERY_INTENT_CALLED);
             }
             finish();

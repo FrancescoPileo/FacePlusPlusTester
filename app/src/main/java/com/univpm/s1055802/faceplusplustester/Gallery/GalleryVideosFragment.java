@@ -112,11 +112,15 @@ public class GalleryVideosFragment extends Fragment implements GalleryFragment {
                     }
                 });
                 if (videoDirFiles.length >= 1){
-                    videoFiles.add(videoDirFiles[0]);
                     framesDir = new File(listDir[i],"Frames");
                     if (framesDir.isDirectory()){
                         File[] listFrames = framesDir.listFiles();
-                        filePath.add(i, Uri.fromFile(listFrames[0]).toString());
+                        if (framesDir.listFiles().length >= 1) {
+                            videoFiles.add(videoDirFiles[0]);
+                            filePath.add(Uri.fromFile(listFrames[0]).toString());
+                        /*} else {
+                            filePath.add(FileUtils.resourceToUri(GalleryVideosFragment.this.getContext(), R.drawable.fpp_no_video).toString());
+                        */}
                     }
                 }
             }

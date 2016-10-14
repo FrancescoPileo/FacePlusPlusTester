@@ -22,7 +22,8 @@ import android.content.ContentResolver;
         import android.content.ContentUris;
         import android.content.Context;
         import android.content.Intent;
-        import android.database.Cursor;
+import android.content.res.Resources;
+import android.database.Cursor;
         import android.database.DatabaseUtils;
         import android.graphics.Bitmap;
         import android.net.Uri;
@@ -525,4 +526,22 @@ public class FileUtils {
 
         fileOrDirectory.delete();
     }
+
+    /**
+     * Get Uri from a resource
+     * @param context
+     * @param resId
+     * @return
+     */
+    public static Uri resourceToUri(Context context, int resId) {
+        final Resources resources = context.getResources();
+        final Uri uri = new Uri.Builder()
+                .scheme(ContentResolver.SCHEME_ANDROID_RESOURCE)
+                .authority(resources.getResourcePackageName(resId))
+                .appendPath(resources.getResourceTypeName(resId))
+                .appendPath(resources.getResourceEntryName(resId))
+                .build();
+        return uri;
+    }
+
 }
