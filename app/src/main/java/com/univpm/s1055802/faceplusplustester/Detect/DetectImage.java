@@ -386,7 +386,7 @@ public class DetectImage extends AppCompatActivity {
     private void updateImageInfo(){
         ArrayList<String> imgInfo = new ArrayList<String>();
         imgInfo.add("Id: " + img.getImgId());
-        imgInfo.add("Faces detected: " + img.getFacesNumber());
+        imgInfo.add("Faces detected: " + img.getFacesNumber() + " - Click on a face to the info");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, imgInfo);
         lstvImage.setAdapter(adapter);
