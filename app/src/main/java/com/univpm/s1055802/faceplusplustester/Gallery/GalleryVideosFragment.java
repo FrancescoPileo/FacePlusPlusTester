@@ -101,19 +101,23 @@ public class GalleryVideosFragment extends Fragment implements GalleryFragment {
 
 
             filePath = new ArrayList<>();
+            Log.v("video", String.valueOf(listDir.length));
             for (int i = 0; i < listDir.length; i++)
             {
-                Log.v("video", String.valueOf(listDir.length));
-                videoFiles.add(listDir[i].listFiles(new FilenameFilter() {
+                Log.v("i: ", String.valueOf(i));
+                File[] videoDirFiles = listDir[i].listFiles(new FilenameFilter() {
                     public boolean accept(File dir, String name) {
                         File file = new File(dir.getPath(), name);
                         return (name.toLowerCase().endsWith(".mp4") && file.length() > 10);
                     }
-                })[0]);
-                framesDir = new File(listDir[i],"Frames");
-                if (framesDir.isDirectory()){
-                    File[] listFrames = framesDir.listFiles();
-                    filePath.add(i, Uri.fromFile(listFrames[0]).toString());
+                });
+                if (videoDirFiles.length >= 1){
+                    videoFiles.add(videoDirFiles[0]);
+                    framesDir = new File(listDir[i],"Frames");
+                    if (framesDir.isDirectory()){
+                        File[] listFrames = framesDir.listFiles();
+                        filePath.add(i, Uri.fromFile(listFrames[0]).toString());
+                    }
                 }
             }
         }
