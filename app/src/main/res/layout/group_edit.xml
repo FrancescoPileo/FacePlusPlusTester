@@ -23,7 +23,7 @@
             app:popupTheme="@style/AppTheme.PopupOverlay"
             android:clickable="false"
             app:logoDescription="@string/app_name"
-            app:title="Person edit"
+            app:title="Group edit"
             app:logo="@drawable/fpp_tester_white_116x32" />
 
     </android.support.design.widget.AppBarLayout>
